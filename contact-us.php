@@ -57,6 +57,9 @@
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
+                <div style="float: left;">
+                    <a class="navbar-brand" href="index.php"><img class="img-responsive" height="100%" src="images/logo.png" alt="logo"></a>
+                </div>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -64,7 +67,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img width="200" src="images/logo.png" alt="logo"></a>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">

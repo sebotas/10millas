@@ -8,7 +8,7 @@
     <title>10 Millas</title>
 
 	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -57,6 +57,9 @@
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
+                <div style="float: left;">
+                    <a class="navbar-brand" href="index.php"><img class="img-responsive" height="100%" src="images/logo.png" alt="logo"></a>
+                </div>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -64,7 +67,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img width="200" src="images/logo.png" alt="logo"></a>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">
@@ -73,7 +75,7 @@
                         <li><a href="about-us.php">Sobre Nosotros</a></li>
                         <li><a href="productos.php">Productos</a></li>
                         <!-- <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li> 
+                        <li><a href="portfolio.html">Portfolio</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -112,7 +114,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <div class="col-sm-6 animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img1.png" class="img-responsive">
                                 </div>
@@ -133,7 +135,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <div class="col-sm-6 animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img2.png" class="img-responsive">
                                 </div>
@@ -153,7 +155,7 @@
                                     <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
                                 </div>
                             </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <div class="col-sm-6 animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img3.png" class="img-responsive">
                                 </div>
@@ -230,7 +232,7 @@
                 </div><!--/.services-->
             </div><!--/.row-->
         </div><!--/.container-->
-    </section> --><!--/#feature-->
+    </section><!--/#feature-->
 
     <section id="recent-works">
         <div class="container">
