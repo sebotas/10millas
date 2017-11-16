@@ -6,7 +6,7 @@
 **************************/
 
 body {
-  background: #fff;
+  background: #000;/*#fff;*/
   font-family: 'Open Sans', sans-serif;
   color:#4e4e4e;
   line-height: 22px;
@@ -539,7 +539,7 @@ input.search-form:hover {
 }
 
 #feature {
-  background: #f2f2f2;
+  background: #000;/*#f2f2f2;*/
   padding-bottom: 40px;
 }
 

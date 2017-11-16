@@ -1,177 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>10 Millas</title>
-
-	<!-- core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <?php
+        include 'inc/head.php';
+    ?>
 </head><!--/head-->
 
 <body class="homepage">
 
-    <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +591 611-75782</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Buscar">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
+    <?php 
+        include 'inc/header.php';
+    ?>
 
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div style="float: left;">
-                    <a class="navbar-brand" href="index.php"><img class="img-responsive" height="100%" src="images/logo.png" alt="logo"></a>
-                </div>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Inicio</a></li>
-                        <li><a href="about-us.php">Sobre Nosotros</a></li>
-                        <li><a href="productos.php">Productos</a></li>
-                        <!-- <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blog</a></li>-->
-                        <li><a href="contact-us.php">Contacto</a></li>
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-
-    </header><!--/header-->
-
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-
-                <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img1.png" class="img-responsive">
-                                </div>
-                            </div>
+    <section class="no-margin">
+        <div id="main-slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#main-slider" data-slide-to="1"></li>
+                    <li data-target="#main-slider" data-slide-to="2"></li>
+                    <li data-target="#main-slider" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image: url(images/slider/10millas.jpg)">
+                        <div class="container">
 
                         </div>
-                    </div>
-                </div><!--/.item-->
+                    </div><!--/.item-->
 
-                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                    <div class="item" style="background-image: url(images/slider/bg1.jpg)">
+                        <div class="container">
+                            <div class="row slide-margin">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-6 animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
+                                <div class="col-sm-6 animation animated-item-4">
+                                    <div class="slider-img">
+                                        <img src="images/slider/img1.png" class="img-responsive">
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                    </div>
-                </div><!--/.item-->
+                    </div><!--/.item-->
 
-                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                    <div class="item" style="background-image: url(images/slider/bg2.jpg)">
+                        <div class="container">
+                            <div class="row slide-margin">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                                    </div>
                                 </div>
+
+                                <div class="col-sm-6 animation animated-item-4">
+                                    <div class="slider-img">
+                                        <img src="images/slider/img2.png" class="img-responsive">
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="col-sm-6 animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img3.png" class="img-responsive">
+                        </div>
+                    </div><!--/.item-->
+
+                    <div class="item" style="background-image: url(images/slider/bg3.jpg)">
+                        <div class="container">
+                            <div class="row slide-margin">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 animation animated-item-4">
+                                    <div class="slider-img">
+                                        <img src="images/slider/img3.png" class="img-responsive">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-        </a>
+                    </div><!--/.item-->
+                </div><!--/.carousel-inner-->
+            </div><!--/.carousel-->
+            <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="next hidden-xs" href="#main-slider" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
     </section><!--/#main-slider-->
+
+    <section id="galleryVideo">
+        <div class="center wow fadeInDown">
+            <h2>Nuestros Videos</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+            <div id="gallery" style="display:none;">
+
+                <div data-type="youtube"
+                 data-title="Waimea cliff jump"
+                 data-description="Waimea cliff jump description"
+                 data-thumb="https://i.ytimg.com/vi/sogCtOe8FFY/mqdefault.jpg"
+                 data-image="https://i.ytimg.com/vi/sogCtOe8FFY/sddefault.jpg"
+                 data-videoid="sogCtOe8FFY" ></div>
+
+                <div data-type="youtube"
+
+                 data-title="10 Millas"
+                 data-description="furla tiger description"
+                 data-thumb="http://img.youtube.com/vi/URcwzYviImw/0.jpg"
+                 data-image="http://img.youtube.com/vi/URcwzYviImw/0.jpg"
+                 data-videoid="URcwzYviImw" >
+                </div>
+
+
+                <div data-type="vimeo"
+                 data-title="The Mountain"
+                 data-description="The Mountain description"
+                 data-thumb="http://i.vimeocdn.com/video/145026168_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/145026168_640.jpg"
+                 data-videoid="22439234" >
+                </div>
+
+
+            <div data-type="vimeo"
+                 data-title="The City Limits"
+                 data-description="The City Limits description"
+                 data-thumb="http://i.vimeocdn.com/video/359456864_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/359456864_640.jpg"
+                 data-videoid="23237102" ></div>
+
+
+            <div data-type="vimeo"
+                 data-title="Landscapes: Volume Two"
+                 data-description="Landscapes: Volume Two description"
+                 data-thumb="http://i.vimeocdn.com/video/487882964_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/487882964_640.jpg"
+                 data-videoid="29950141" ></div>
+
+
+            <div data-type="vimeo"
+                 data-title="AFTERGLOW - Lightsuit Segment"
+                 data-description="AFTERGLOW - Lightsuit Segment description"
+                 data-thumb="http://i.vimeocdn.com/video/492928158_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/492928158_640.jpg"
+                 data-videoid="108679294" ></div>
+
+
+            <div data-type="vimeo"
+                 data-title="Birds on the Wires"
+                 data-description="Birds on the Wires descrition"
+                 data-thumb="http://i.vimeocdn.com/video/24171751_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/24171751_640.jpg"
+                 data-videoid="6428069" ></div>
+
+
+            <div data-type="vimeo"
+                 data-title="Alma"
+                 data-description="Alma - description"
+                 data-thumb="http://i.vimeocdn.com/video/12884280_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/12884280_640.jpg"
+                 data-videoid="4749536" ></div>
+
+
+            <div data-type="vimeo"
+                 data-title="Into The Mind - Official Teaser"
+                 data-description="Into The Mind - Official Teaser description"
+                 data-thumb="http://i.vimeocdn.com/video/376134405_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/376134405_640.jpg"
+                 data-videoid="54348266" ></div>
+
+
+            <div data-type="vimeo"
+                 data-title="JP Auclair Street Segment"
+                 data-description="JP Auclair Street Segment description"
+                 data-thumb="http://i.vimeocdn.com/video/222683377_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/222683377_640.jpg"
+                 data-videoid="32863936" ></div>
+
+
+            <div data-type="vimeo"
+                 data-title="HDR Video Demonstration"
+                 data-description="HDR Video Demonstration description"
+                 data-thumb="http://i.vimeocdn.com/video/88221410_200x150.jpg"
+                 data-image="http://i.vimeocdn.com/video/88221410_640.jpg"
+                 data-videoid="14821961" ></div>
+        </div>
+    </section>
 
     <section id="feature" >
         <div class="container">
@@ -670,27 +694,33 @@
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2017 <a target="_blank" href="#" title="">InnovaSoftware</a>. Todos los derechos reservados.
-                </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Sobre Nosotros</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
+            <?php 
+                include 'inc/footer.php';
+            ?>
         </div>
     </footer><!--/#footer-->
 
     <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $('#index').addClass('active');
+    </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+
+    <script type='text/javascript' src='unitegallery/js/unitegallery.js'></script>
+    <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+    <script type='text/javascript' src='unitegallery/themes/carousel/ug-theme-carousel.js'></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            jQuery("#gallery").unitegallery({
+                tile_height:150,
+                tile_width: 200
+            });
+        });
+    </script>
 </body>
 </html>
