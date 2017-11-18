@@ -623,6 +623,12 @@ input.search-form:hover {
   color: #fff;
 }
 
+.recent-work-wrap .recent-work-inner h3 {
+  font-size: 24px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
 .recent-work-wrap .overlay {
   position: absolute;
   top: 0;

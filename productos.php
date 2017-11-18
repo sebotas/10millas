@@ -1,3 +1,13 @@
+<?php
+    include 'admin/adodb5/adodb.inc.php';
+    include 'admin/inc/function.php';
+
+    $db = NewADOConnection('mysqli');
+    //$db->debug = true;
+    $db->Connect();
+
+    $op = new cnFunction();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +18,7 @@
 
 <body class="homepage">
 
-    <?php 
+    <?php
         include 'inc/header.php';
     ?>
 
@@ -22,117 +32,41 @@
 
             <ul class="portfolio-filter text-center">
                 <li><a class="btn btn-default active" href="#" data-filter="*">Todos</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Hombres</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".html">Mujeres</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Niños</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Niñas</a></li>
+                <?php
+                    $strSql = "SELECT * FROM categoria ORDER BY (id_categoria) DESC";
+                    $sql = $db->EXecute($strSql);
+
+                    while ($row = $sql->FetchRow()) {
+                ?>
+                <li><a class="btn btn-default" href="#" data-filter=".<?=$row['id_categoria']?>"><?=$row['name'];?></a></li>
+                <?php
+                    }
+                ?>
             </ul><!--/#portfolio-filter-->
 
             <div class="row">
                 <div class="portfolio-items">
-                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Detalle</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.portfolio-item-->
+                    <?php
+                        $strQuery = "SELECT f.name, p.name AS nombre, p.detail, c.id_categoria FROM producto AS p, foto AS f, categoria AS c WHERE p.id_producto = f.id_producto AND p.id_categoria = c.id_categoria ORDER BY (p.id_producto) DESC ";
+                        $sqlQuery = $db->EXecute($strQuery);
 
-                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+                        while ($row = $sqlQuery->FetchRow()) {
+                    ?>
+                    <div class="portfolio-item <?=$row['id_categoria']?> col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
+                            <img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/<?=$row['name'];?>&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="<?=$row['name'];?>">
                             <div class="overlay">
                                 <div class="recent-work-inner">
-                                    <h3><a href="#">Detalle</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
+                                    <h3><?=$row['nombre'];?></h3>
+                                    <p><?=$row['detail'];?></p>
+                                    <a class="preview" href="admin/modulo/producto/uploads/files/<?=$row['name'];?>" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
                                 </div>
                             </div>
                         </div>
                     </div><!--/.portfolio-item-->
-
-                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Detalle</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.portfolio-item-->
-
-                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Detalle</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.portfolio-item-->
-
-                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Detalle</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.portfolio-item-->
-
-                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Detalle</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.portfolio-item-->
-
-                    <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Detalle</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.portfolio-item-->
-
-                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.portfolio-item-->
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -140,7 +74,7 @@
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
-            <?php 
+            <?php
                 include 'inc/footer.php';
             ?>
         </div>

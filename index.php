@@ -1,3 +1,13 @@
+<?php
+    include 'admin/adodb5/adodb.inc.php';
+    include 'admin/inc/function.php';
+
+    $db = NewADOConnection('mysqli');
+    //$db->debug = true;
+    $db->Connect();
+
+    $op = new cnFunction();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +18,7 @@
 
 <body class="homepage">
 
-    <?php 
+    <?php
         include 'inc/header.php';
     ?>
 
@@ -105,95 +115,22 @@
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
         </div>
             <div id="gallery" style="display:none;">
+                <?php
+                    $strSql = "SELECT * FROM video ORDER BY (id_video) DESC";
+                    $sql = $db->EXecute($strSql);
 
+                    while ($row = $sql->FetchRow()) {
+                ?>
                 <div data-type="youtube"
-                 data-title="Waimea cliff jump"
-                 data-description="Waimea cliff jump description"
-                 data-thumb="https://i.ytimg.com/vi/sogCtOe8FFY/mqdefault.jpg"
-                 data-image="https://i.ytimg.com/vi/sogCtOe8FFY/sddefault.jpg"
-                 data-videoid="sogCtOe8FFY" ></div>
-
-                <div data-type="youtube"
-
-                 data-title="10 Millas"
-                 data-description="furla tiger description"
-                 data-thumb="http://img.youtube.com/vi/URcwzYviImw/0.jpg"
-                 data-image="http://img.youtube.com/vi/URcwzYviImw/0.jpg"
-                 data-videoid="URcwzYviImw" >
+                    data-title="<?=$row['title'];?>"
+                    data-description="<?=$row['detail'];?>"
+                    data-thumb="http://img.youtube.com/vi/<?=$row['idVideo'];?>/0.jpg"
+                    data-image="http://img.youtube.com/vi/<?=$row['idVideo'];?>/0.jpg"
+                    data-videoid="<?=$row['idVideo'];?>" >
                 </div>
-
-
-                <div data-type="vimeo"
-                 data-title="The Mountain"
-                 data-description="The Mountain description"
-                 data-thumb="http://i.vimeocdn.com/video/145026168_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/145026168_640.jpg"
-                 data-videoid="22439234" >
-                </div>
-
-
-            <div data-type="vimeo"
-                 data-title="The City Limits"
-                 data-description="The City Limits description"
-                 data-thumb="http://i.vimeocdn.com/video/359456864_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/359456864_640.jpg"
-                 data-videoid="23237102" ></div>
-
-
-            <div data-type="vimeo"
-                 data-title="Landscapes: Volume Two"
-                 data-description="Landscapes: Volume Two description"
-                 data-thumb="http://i.vimeocdn.com/video/487882964_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/487882964_640.jpg"
-                 data-videoid="29950141" ></div>
-
-
-            <div data-type="vimeo"
-                 data-title="AFTERGLOW - Lightsuit Segment"
-                 data-description="AFTERGLOW - Lightsuit Segment description"
-                 data-thumb="http://i.vimeocdn.com/video/492928158_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/492928158_640.jpg"
-                 data-videoid="108679294" ></div>
-
-
-            <div data-type="vimeo"
-                 data-title="Birds on the Wires"
-                 data-description="Birds on the Wires descrition"
-                 data-thumb="http://i.vimeocdn.com/video/24171751_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/24171751_640.jpg"
-                 data-videoid="6428069" ></div>
-
-
-            <div data-type="vimeo"
-                 data-title="Alma"
-                 data-description="Alma - description"
-                 data-thumb="http://i.vimeocdn.com/video/12884280_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/12884280_640.jpg"
-                 data-videoid="4749536" ></div>
-
-
-            <div data-type="vimeo"
-                 data-title="Into The Mind - Official Teaser"
-                 data-description="Into The Mind - Official Teaser description"
-                 data-thumb="http://i.vimeocdn.com/video/376134405_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/376134405_640.jpg"
-                 data-videoid="54348266" ></div>
-
-
-            <div data-type="vimeo"
-                 data-title="JP Auclair Street Segment"
-                 data-description="JP Auclair Street Segment description"
-                 data-thumb="http://i.vimeocdn.com/video/222683377_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/222683377_640.jpg"
-                 data-videoid="32863936" ></div>
-
-
-            <div data-type="vimeo"
-                 data-title="HDR Video Demonstration"
-                 data-description="HDR Video Demonstration description"
-                 data-thumb="http://i.vimeocdn.com/video/88221410_200x150.jpg"
-                 data-image="http://i.vimeocdn.com/video/88221410_640.jpg"
-                 data-videoid="14821961" ></div>
+                <?php
+                    }
+                ?>
         </div>
     </section>
 
@@ -266,109 +203,28 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a> </h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    $strQuery = "SELECT f.name, p.name AS nombre, p.detail FROM producto AS p, foto AS f WHERE p.id_producto = f.id_producto ORDER BY (p.id_producto) DESC LIMIT 8";
+                    $sqlQuery = $db->EXecute($strQuery);
 
+                    while ($row = $sqlQuery->FetchRow()) {
+                ?>
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
+                        <img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/<?=$row['name'];?>&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="<?=$row['name'];?>">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
+                                <h3><?=$row['nombre'];?></h3>
+                                <p><?=$row['detail'];?></p>
+                                <a class="preview" href="admin/modulo/producto/uploads/files/<?=$row['name'];?>" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#recent-works-->
@@ -694,7 +550,7 @@
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
-            <?php 
+            <?php
                 include 'inc/footer.php';
             ?>
         </div>
