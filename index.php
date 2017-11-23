@@ -43,9 +43,9 @@
                             <div class="row slide-margin">
                                 <div class="col-sm-6">
                                     <div class="carousel-content">
-                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                        <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                                        <h1 class="animation animated-item-1">Camisetas de la Liga Europea</h1>
+                                        <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Ver Mas</a>
                                     </div>
                                 </div>
 
@@ -64,9 +64,9 @@
                             <div class="row slide-margin">
                                 <div class="col-sm-6">
                                     <div class="carousel-content">
-                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                        <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                                        <h1 class="animation animated-item-1">Camisetas de la liga Boliviana</h1>
+                                        <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Ver Mas</a>
                                     </div>
                                 </div>
 
@@ -85,9 +85,9 @@
                             <div class="row slide-margin">
                                 <div class="col-sm-6">
                                     <div class="carousel-content">
-                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                        <a class="btn-slide animation animated-item-3" href="#">Leer Mas</a>
+                                        <h1 class="animation animated-item-1">Camisetas Oficiales del Mundial</h1>
+                                        <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Ver Mas</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 animation animated-item-4">
@@ -112,7 +112,7 @@
     <section id="galleryVideo">
         <div class="center wow fadeInDown">
             <h2>Nuestros Videos</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p class="lead">Nuestros videos demuestran la calidad de nuestros productos</p>
         </div>
             <div id="gallery" style="display:none;">
                 <?php
