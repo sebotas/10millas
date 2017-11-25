@@ -16,7 +16,7 @@
         <div class="container">
 			<div class="center wow fadeInDown">
 				<h2>Acerca de Nosotros</h2>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p class="lead">10 MILLAS surgió  con el objetivo de poder brindarle a los fanáticos de las camisetas de fútbol un lugar donde encontrar la mejor cobertura de los lanzamientos de camisetas alrededor del mundo y todo lo relacionado a las últimas novedades de esta pasión tan particular. La idea comenzó por mi pasión por el futbol y por el Deporte, contamos con más de 10 años de experiencia en la distribución de ropa deportiva de alta calidad al por mayor y menor</p>
 			</div>
 
 			<!-- about us slider -->
@@ -57,7 +57,7 @@
 
 				<div class="center wow fadeInDown">
 					<h2>Misión</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+					<p class="lead">10 millas se centra  en los últimos estrenos de las marcas y los clubes y selecciones más importantes, habiendo cubierto más de 2,000 estrenos desde su inauguración. Buscando dar relevancia a equipos grandes como otros más desconocidos que podemos destacar a través nuestros diseños. También cubrimos algunas iniciativas de marketing particulares apuntadas al fanático por medio de la moda deportiva, y otro tipo de productos relacionados tecnología Europea.</p>
 				</div>
 
 				<!-- <div class="row">
@@ -125,7 +125,8 @@
 			<div class="team">
 				<div class="center wow fadeInDown">
 					<h2>Visión</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+					<p class="lead">Nuestra página web provee información nuestros últimos productos, todos estos son seleccionados y confeccionados con la materia prima de más alta calidad, para asegurarnos de que nuestros clientes  queden completamente satisfechos.</p>
+					<p class="lead"><strong>Gracias por formar parte de 10 MILLAS.</strong></p>
 				</div>
 
 				<div class="row team-bar">

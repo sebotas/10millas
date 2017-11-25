@@ -233,82 +233,12 @@
 	   <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Nuestro Servicio</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="lead">Calidad y Tecnologia Europea en Ropa Deportiva</p>
             </div>
 
-            <div class="row">
+            <div class="row"><br><br><br><br><br>
 
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services1.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Garantia</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services2.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Envío a Domicilio</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services3.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Obtén Ayuda en la Tienda</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services4.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services5.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services6.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div> -->
+                
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#services-->
@@ -448,11 +378,11 @@
     <section id="partner">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Nuestros Compañeros</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <h2>Nuestra Experiencia</h2>
+                <p class="lead">Contamos con más de 10 años de experiencia en la distribución de ropa deportiva de alta calidad al por mayor y menor</p>
             </div>
 
-            <div class="partners">
+            <!-- <div class="partners">
                 <ul>
                     <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/partner1.png"></a></li>
                     <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/partner2.png"></a></li>
@@ -460,7 +390,7 @@
                     <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/partner4.png"></a></li>
                     <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/partner5.png"></a></li>
                 </ul>
-            </div>
+            </div> -->
         </div><!--/.container-->
     </section><!--/#partner-->
 
@@ -474,7 +404,7 @@
                         </div>
                         <div class="media-body">
                             <h2>¿Tiene alguna pregunta o necesita un presupuesto personalizado?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +591 611-75782</p>
+                            <p>Comunique con nosotros al WhatsApp: +591 611-75782</p>
                         </div>
                     </div>
                 </div>
