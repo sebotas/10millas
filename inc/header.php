@@ -12,7 +12,7 @@
                                 <li><a href="https://twitter.com/10millas1" target="blank"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCzFbPP_iA2uGgbCXofnaXzg" target="blank"><i class="fa fa-youtube"></i></a></li>
                                 <li><a href="admin/" target="blank"><i class="fa fa-lock"></i></a></li>
-                                <!-- <li><a href="#"><i class="fa fa-skype"></i></a></li> -->
+                                <li><a href="https://p3plcpnl0827.prod.phx3.secureserver.net:2096/logout/?locale=es" target="blank"><i class="fa fa-envelope-o"></i></a></li>
                             </ul>
                             <div class="search">
                                 <form role="form">
