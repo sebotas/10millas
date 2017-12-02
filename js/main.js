@@ -39,7 +39,7 @@ jQuery(function($) {'use strict',
 	});
 
 	// Contact form
-	var form = $('#main-contact-form');
+	/*var form = $('#main-contact-form');
 	form.submit(function(event){
 		event.preventDefault();
 		var form_status = $('<div class="form_status"></div>');
@@ -52,7 +52,9 @@ jQuery(function($) {'use strict',
 		}).done(function(data){
 			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
 		});
-	});
+	});*/
+
+	
 
 
 	//goto top
@@ -68,3 +70,29 @@ jQuery(function($) {'use strict',
 		social_tools: false
 	});
 });
+
+function sendEmail(p){
+		var form = $('#main-contact-form');
+	    var dato = JSON.stringify( $('#main-contact-form').serializeObject() );
+	    //event.preventDefault();
+		var form_status = $('.status');
+	    $.ajax({
+	        url: p,
+	        type: 'post',
+	        dataType: 'json',
+	        async:true,
+	        data:{res:dato},
+	        beforeSend: function(data){
+	           form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Su mensaje esta siendo enviado...</p>').fadeIn();
+	        }
+	        /*success: function(data){
+	            $('#datos_ajax').html('<div class="alert alert-success" role="alert"><strong>Se mensaje, fue enviado correctamente.</strong></div><br>').fadeIn(4000,function (){
+	                    $('#datos_ajax').fadeOut(2000,function () {
+	                        $('#myModal').modal('hide').delay(7000);
+	                    });
+	                });
+	        }*/
+	    }).done(function(data){
+			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
+		});
+	}

@@ -34,10 +34,7 @@
 							<img src="images/slider_one.jpg" class="img-responsive" alt="">
 					   </div>
 					   <div class="item">
-							<img src="images/slider_one.jpg" class="img-responsive" alt="">
-					   </div>
-					   <div class="item">
-							<img src="images/slider_one.jpg" class="img-responsive" alt="">
+							<img src="images/slider_two.jpg" class="img-responsive" alt="">
 					   </div>
 					</div>
 
