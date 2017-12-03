@@ -26,7 +26,7 @@
         <div class="container">
             <div class="center">
                <h2>Nuestros Productos</h2>
-               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+               <p class="lead">Calidad y Tecnologia Europea en Ropa Deportiva</p>
             </div>
 
 

@@ -45,7 +45,7 @@
                                     <div class="carousel-content">
                                         <h1 class="animation animated-item-1">Camisetas de la Liga Europea</h1>
                                         <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
-                                        <a class="btn-slide animation animated-item-3" href="#">Ver Mas</a>
+                                        
                                     </div>
                                 </div>
 
@@ -66,7 +66,7 @@
                                     <div class="carousel-content">
                                         <h1 class="animation animated-item-1">Camisetas de la liga Boliviana</h1>
                                         <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
-                                        <a class="btn-slide animation animated-item-3" href="#">Ver Mas</a>
+                                        
                                     </div>
                                 </div>
 
@@ -87,7 +87,7 @@
                                     <div class="carousel-content">
                                         <h1 class="animation animated-item-1">Camisetas Oficiales del Mundial</h1>
                                         <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
-                                        <a class="btn-slide animation animated-item-3" href="#">Ver Mas</a>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-sm-6 animation animated-item-4">
@@ -134,11 +134,32 @@
         </div>
     </section>
 
+    <section id="feature" >
+        <div class="container">           
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <img src="images/tab1.png" class="img-responsive">
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <img src="images/tab2.png" class="img-responsive">
+                        </div>
+                    </div><!--/.col-md-4-->                   
+                    
+                </div><!--/.services-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
     <section id="recent-works">
         <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Productos Recientes</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="lead"></p>
             </div>
 
             <div class="row">
