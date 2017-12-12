@@ -45,7 +45,7 @@
                                     <div class="carousel-content">
                                         <h1 class="animation animated-item-1">Camisetas de la Liga Europea</h1>
                                         <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
-                                        
+
                                     </div>
                                 </div>
 
@@ -66,7 +66,7 @@
                                     <div class="carousel-content">
                                         <h1 class="animation animated-item-1">Camisetas de la liga Boliviana</h1>
                                         <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
-                                        
+
                                     </div>
                                 </div>
 
@@ -87,7 +87,7 @@
                                     <div class="carousel-content">
                                         <h1 class="animation animated-item-1">Camisetas Oficiales del Mundial</h1>
                                         <h2 class="animation animated-item-2">Calidad y Tecnologia Europea en Ropa Deportiva...</h2>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-sm-6 animation animated-item-4">
@@ -135,7 +135,7 @@
     </section>
 
     <section id="feature" >
-        <div class="container">           
+        <div class="container">
             <div class="row">
                 <div class="features">
                     <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -148,8 +148,8 @@
                         <div class="feature-wrap">
                             <img src="images/tab2.png" class="img-responsive">
                         </div>
-                    </div><!--/.col-md-4-->                   
-                    
+                    </div><!--/.col-md-4-->
+
                 </div><!--/.services-->
             </div><!--/.row-->
         </div><!--/.container-->
@@ -164,7 +164,7 @@
 
             <div class="row">
                 <?php
-                    $strQuery = "SELECT f.name, p.name AS nombre, p.detail FROM producto AS p, foto AS f WHERE p.id_producto = f.id_producto ORDER BY (p.id_producto) DESC LIMIT 8";
+                    $strQuery = "SELECT f.name, p.name AS nombre, p.detail, p.id_producto FROM producto AS p, foto AS f WHERE p.id_producto = f.id_producto ORDER BY (p.id_producto) DESC LIMIT 8";
                     $sqlQuery = $db->EXecute($strQuery);
 
                     while ($row = $sqlQuery->FetchRow()) {
@@ -177,7 +177,28 @@
                             <div class="recent-work-inner">
                                 <h3><?=$row['nombre'];?></h3>
                                 <p><?=$row['detail'];?></p>
-                                <a class="preview" href="admin/modulo/producto/uploads/files/<?=$row['name'];?>" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver</a>
+
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"
+                                <?php
+                                    $c=0;
+                                    $query = "SELECT name FROM foto WHERE id_producto = '".$row['id_producto']."' ";
+                                    $strReg = $db->EXecute($query);
+
+                                    while ($reg = $strReg->FetchRow()) {
+                                ?>
+                                    data-img<?=$c?>="<?=$reg['name']?>"
+                                <?php
+                                    $c++;
+                                    }
+                                    $c--;
+                                ?>
+                                    data-c = "<?=$c?>"
+                                    data-id="<?=$row['id_producto']?>"
+                                    data-name="<?=$row['nombre']?>"
+                                    data-detail="<?=$row['detail']?>" >
+                                    <i class="fa fa-eye"></i> Leer mas
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -198,7 +219,7 @@
 
             <div class="row"><br><br><br><br><br>
 
-                
+
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#services-->
@@ -341,16 +362,6 @@
                 <h2>Nuestra Experiencia</h2>
                 <p class="lead">Contamos con más de 10 años de experiencia en la distribución de ropa deportiva de alta calidad al por mayor y menor</p>
             </div>
-
-            <!-- <div class="partners">
-                <ul>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/partner1.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/partner2.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/partner3.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/partner4.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/partner5.png"></a></li>
-                </ul>
-            </div> -->
         </div><!--/.container-->
     </section><!--/#partner-->
 
@@ -446,6 +457,38 @@
         </div>
     </footer><!--/#footer-->
 
+    <!-- Large modal -->
+
+    <div class="modal fade bs-example-modal-lg" id="detailPro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Detalle</h4>
+            </div>
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div id="fotos" class="row">
+
+                        </div>
+
+                      </div>
+                      <div class="col-md-6">
+                        <h4 id="title"></h4>
+                        <div id="detail">
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/jquery.js"></script>
     <script type="text/javascript">
         $('#index').addClass('active');
@@ -459,6 +502,7 @@
     <script type='text/javascript' src='unitegallery/js/unitegallery.js'></script>
     <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
     <script type='text/javascript' src='unitegallery/themes/carousel/ug-theme-carousel.js'></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
 
     <script>
         jQuery(document).ready(function($) {
@@ -466,6 +510,39 @@
                 tile_height:150,
                 tile_width: 200
             });
+        });
+
+        $('#detailPro').on('hidden.bs.modal', function (e) {
+
+           // alert('entra');
+
+        });
+
+        $('#detailPro').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Botón que activó el modal
+            var idp = button.data('id'); // Extraer la información de atributos de datos
+            var title = button.data('name'); // Extraer la información de atributos de datos
+            var detail = button.data('detail'); // Extraer la información de atributos de datos
+            var c = button.data('c');
+
+            var html = '';
+            for (var i = 0; i <= c; i++) {
+                var img = button.data('img'+i);
+                html+= '<div class="col-xs-12 col-sm-4 col-md-6">';
+                html+= '<div>';
+                html+= '<a class="example-image-link" href="admin/modulo/producto/uploads/files/'+img+'" data-lightbox="example-set" >';
+                html+= '<img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/'+img+'&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="'+img+'">';
+                html+= '</a>';
+                html+= '</div>';
+                html+= '</div>';
+            }
+            //var ff = <?=$idp?>;
+            //alert(ff);
+            var modal = $(this);
+            modal.find('.modal-body #fotos').html(html);
+            modal.find('.modal-body #title').html(title);
+            modal.find('.modal-body #detail').html(detail);
+            //alert('entra');
         });
     </script>
 </body>
