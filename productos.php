@@ -36,9 +36,9 @@
                     $strSql = "SELECT * FROM categoria ORDER BY (id_categoria) DESC";
                     $sql = $db->EXecute($strSql);
 
-                    while ($row = $sql->FetchRow()) {
+                    while ($cat = $sql->FetchRow()) {
                 ?>
-                <li><a class="btn btn-default" href="#" data-filter=".<?=$row['id_categoria']?>"><?=$row['name'];?></a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".<?=$cat['id_categoria']?>"><?=$cat['name'];?></a></li>
                 <?php
                     }
                 ?>
@@ -47,14 +47,21 @@
             <div class="row">
                 <div class="portfolio-items">
                     <?php
-                        $strQuery = "SELECT f.name, p.name AS nombre, p.detail, c.id_categoria, p.id_producto FROM producto AS p, foto AS f, categoria AS c WHERE p.id_producto = f.id_producto AND p.id_categoria = c.id_categoria ORDER BY (p.id_producto) DESC ";
-                        $sqlQuery = $db->EXecute($strQuery);
+                    $strQuery = "SELECT p.name AS nombre, p.detail, p.id_producto, c.id_categoria FROM producto AS p, categoria AS c WHERE p.id_categoria = c.id_categoria ORDER BY (p.id_producto) DESC LIMIT 8";
+                    $sqlQuery = $db->EXecute($strQuery);
 
-                        while ($row = $sqlQuery->FetchRow()) {
-                    ?>
+                    while ($row = $sqlQuery->FetchRow()) {
+                ?>
                     <div class="portfolio-item <?=$row['id_categoria']?> col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
-                            <img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/<?=$row['name'];?>&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="<?=$row['name'];?>">
+                            <?php
+                            $imgQuery = "SELECT name FROM foto WHERE id_producto = '".$row['id_producto']."' ";
+                            $sqlImg = $db->EXecute($imgQuery);
+
+                           $reg = $sqlImg->FetchRow();
+                            ?>
+                            <img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/<?=$reg['name'];?>&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="<?=$reg['name'];?>">
+                            
                             <div class="overlay">
                                 <div class="recent-work-inner">
                                 <h3><?=$row['nombre'];?></h3>

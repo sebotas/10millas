@@ -164,15 +164,21 @@
 
             <div class="row">
                 <?php
-                    $strQuery = "SELECT f.name, p.name AS nombre, p.detail, p.id_producto FROM producto AS p, foto AS f WHERE p.id_producto = f.id_producto ORDER BY (p.id_producto) DESC LIMIT 8";
+                    $strQuery = "SELECT name AS nombre, detail, id_producto FROM producto ORDER BY (id_producto) DESC LIMIT 8";
                     $sqlQuery = $db->EXecute($strQuery);
 
                     while ($row = $sqlQuery->FetchRow()) {
                 ?>
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
+                        <?php
+                            $imgQuery = "SELECT name FROM foto WHERE id_producto = '".$row['id_producto']."' ";
+                            $sqlImg = $db->EXecute($imgQuery);
 
-                        <img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/<?=$row['name'];?>&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="<?=$row['name'];?>">
+                          $reg = $sqlImg->FetchRow()
+                        ?>
+                        <img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/<?=$reg['name'];?>&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="<?=$reg['name'];?>">
+                        
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><?=$row['nombre'];?></h3>
