@@ -178,11 +178,13 @@
                           $reg = $sqlImg->FetchRow()
                         ?>
                         <img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/<?=$reg['name'];?>&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="<?=$reg['name'];?>">
-                        
+
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><?=$row['nombre'];?></h3>
-                                <p><?=$row['detail'];?></p>
+                                <div>
+                                    <?=$op->getSubString($row['detail'], 90)?>
+                                </div>
 
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"
                                 <?php
