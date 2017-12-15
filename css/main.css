@@ -385,6 +385,7 @@ input.search-form:hover {
 
 #main-slider .carousel .carousel-content {
   margin-top: 150px;
+  text-shadow: 3px 3px 3px #000;
 }
 
 /*#main-slider .carousel .slide-margin{

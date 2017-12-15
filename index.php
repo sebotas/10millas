@@ -518,6 +518,14 @@
                 tile_height:150,
                 tile_width: 200
             });
+            
+             /*$('.search').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#footer').offset().top
+                }, 2000); 
+                return false;
+             });*/
+           
         });
 
         $('#detailPro').on('hidden.bs.modal', function (e) {

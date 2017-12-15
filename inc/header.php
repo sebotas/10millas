@@ -2,10 +2,10 @@
         <div class="top-bar">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-4">
+                    <div class="col-sm-4 col-xs-4">
                         <div class="top-number"><p><i class="fa fa-phone-square"></i>  +591 611-75782</p></div>
                     </div>
-                    <div class="col-sm-6 col-xs-8">
+                    <div class="col-sm-8 col-xs-8">
                        <div class="social">
                             <ul class="social-share">
                                 <li><a href="https://www.facebook.com/10-Millas-828623317296914/" target="blank"><i class="fa fa-facebook"></i></a></li>
@@ -15,9 +15,11 @@
                                 <li><a href="https://p3plcpnl0827.prod.phx3.secureserver.net:2096/logout/?locale=es" target="blank"><i class="fa fa-envelope-o"></i></a></li>
                             </ul>
                             <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Buscar">
+                                <form role="form" action="search.php" method="POST">
+                                    <input type="text" id="search" name="search" class="search-form" autocomplete="off" placeholder="Buscar">
+                                    <button type="submit" class="btn btn-link">
                                     <i class="fa fa-search"></i>
+                                    </button>
                                 </form>
                            </div>
                        </div>

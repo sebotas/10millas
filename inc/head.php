@@ -1,7 +1,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Venta de ropa deportiva, poleras, Bolivar, The Strongest">
-    <meta name="author" content="Heberth Israel Tapia Andrade">
+    <meta name="description" content="Calidad y Tecnologia Europea en Ropa Deportiva">
+    <meta name="author" content="Heberth Israel Tapia Andrade - 591 77237022">
     <title>10 Millas</title>
 
 	<!-- core CSS -->
