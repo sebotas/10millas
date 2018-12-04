@@ -169,7 +169,7 @@
             for (var i = 0; i <= c; i++) {
                 var img = button.data('img'+i);
                 html+= '<div class="col-xs-12 col-sm-4 col-md-6">';
-                html+= '<div>';
+                html+= '<div class="marco">';
                  html+= '<a class="example-image-link" href="admin/modulo/producto/uploads/files/'+img+'" data-lightbox="example-set" >';
                 html+= '<img class="img-responsive thumb" src="admin/thumb/phpThumb.php?src=../modulo/producto/uploads/files/'+img+'&amp;w=600&amp;h=455&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="'+img+'">';
                 html+= '</a>';
